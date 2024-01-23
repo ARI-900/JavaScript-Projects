@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DIGITAL CLOCK</title>
+    <style>
+        #main{
+            font-size: 100px;
+            margin: 200px auto;
+            text-align: center;
+            height: 150px;
+            width: 900px;
+            border: 2px solid navy;
+            border-radius: 10px;
+            color: white;
+            background: black;
+            box-shadow: 5px 5px 5px gray;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body onload="setTime()">
+    <h1 id="main" onclick="setTime()">
+        
+    </h1>
+</body>
+<script type="text/javascript">
+    function setTime(){
+        var h,m,s,session = "AM";
+        var date = new Date();
+        
+        h = date.getHours();
+        m = date.getMinutes();
+        s = date.getSeconds();
+        
+         s = s < 10? "0" + s : s;
+        h = h<10? "0" + h : h;
+        m = m<10? "0"+m : m;
+        
+        if(h > 11){
+                session = "PM";
+        }
+        if(h>12){
+            h = h-12;
+        }
+       
+        
+        
+        var time = h + " : " + m + " : " + s + "  " + session;
+        document.getElementById('main').innerText=time;
+        setTimeout(
+            setTime,1000
+        );
+    }
+    setTimeout(setTime,1000);
+</script>
+</html>

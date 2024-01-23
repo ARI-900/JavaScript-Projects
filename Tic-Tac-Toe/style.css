@@ -1,0 +1,89 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: 0px;
+}
+html,body{
+    background-color: #548687;
+}
+#wrapper{
+    max-width: 900px;
+    min-height: 100vh;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* border: 2px solid rebeccapurple; */
+    margin: 0px auto;
+    text-align: center;
+}
+
+/* game container */
+.header{
+    font-size: 2rem;
+    font-family: fantasy;
+    color: #F1EDEE;
+    margin: 1rem 0px;
+    text-decoration: underline;
+}
+.game{
+    height: 50vh;
+    width: 50vh;
+    /* border: 2px solid rebeccapurple; */
+    margin: 1.5rem auto;
+    margin-top: 3.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+
+}
+.box{
+    background-color: #DB5461;
+    color: yellow;
+    font-size: 3rem;
+    font-weight: bolder;
+
+    width: 16vh;
+    height: 16vh;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 1rem rgba(0,0,0,0.2);
+}
+
+#reset_btn{
+    font-size: 1.25rem;
+    padding: 0.7rem;
+    background-color: #191919;
+    color: #fff;
+    border-radius: 1rem;
+    border:none;
+    font-weight: 800;
+}
+
+.msg_box{
+    color: #F4F4ED;
+    font-size: 3rem;
+    font-family: sans-serif;
+    margin-top: 2rem;
+    font-weight: bolder;
+}
+.hide{
+    display: none;
+}
+
+
+
+/* responsive */
+@media screen and (max-width: 670px) {
+    html{
+        font-size: 70%;
+    }
+    .game{
+        width: 40vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .box{
+        width: 11vh;
+    }
+}
