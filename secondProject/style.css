@@ -1,0 +1,355 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+html,body{
+    background-color: black;
+    color: white;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+    /* overflow: hidden; */
+}
+main{
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+}
+
+.card_wrapper{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 28rem;
+    width: 25rem;
+    border: 2px solid #ffffff30;  /* transparency applied */
+    display:  flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #ffffff1a;
+    backdrop-filter: blur(15px);
+    
+    border-radius: 15px;
+    align-items: center;
+    
+}
+.profileImage img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.username h2{
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.about h3{
+    font-size: 1.1em;
+    color: #ffffff85;
+    letter-spacing: 2px;
+}
+
+.btns{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.8rem;
+    border: 2px solid #ffffff85;
+    border-radius: 10px;
+    background-color: #ffffff00;
+    color: white;
+    transition: all 0.5s ease-in-out;
+    font-weight: bold;
+    
+}
+
+.circle1{
+    position: absolute;
+    top: 5%;
+    left: 30%;
+    height: 13em;
+    width: 13em;
+    border-radius: 50%;
+    background: linear-gradient(-25deg, #5648d8, #8641f4);
+    box-shadow: 0 0  50px #5648d8;
+    animation-name: circle1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+@keyframes circle1{
+    from{
+        top: 5%;
+        left: 30%;
+    }
+    to{
+        top: 6%;
+        left: 33%;
+    }
+}
+/* circle media query */
+
+
+.circle2{
+    position: absolute;
+    bottom: 5%;
+    right: 30%;
+    height: 19em;
+    width: 19em;
+    border-radius: 50%;
+    background: linear-gradient(-25deg, #d84869, #f46641);
+    box-shadow: 0 0 50px  #d84869;
+    animation-name: circle2;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+
+}
+
+@keyframes circle2{
+    from{
+        bottom: 5%;
+        right: 30%;
+    }
+    to{
+        bottom: 6%;
+        right: 33%;
+    }
+}
+/* medai query on circle */
+@media screen and (max-width: 900px) {
+    .circle2{
+        height: 13em;
+        width: 13em; 
+    }
+    
+}
+.btn:hover{
+    background-color: #fff;
+    color: black;
+}
+
+@media screen and (max-width: 525px) {
+    .card_wrapper{
+        width: 19rem;
+    }
+    .username h2{
+        font-size: 1.5rem;
+       ;
+    }
+    .about h3{
+        font-size: 0.8em;
+       
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .card_wrapper{
+        width: 15rem;
+    }
+    .username h2{
+        font-size: 1rem;
+       ;
+    }
+    .about h3{
+        font-size: 0.8em;
+       
+    }
+    .btn{
+        
+        gap: 0.2rem;
+        padding: 0.4rem;
+        border: 2px solid #ffffff85;
+        
+    }
+}
+
+
+/* Modal Card */
+.modal_card{
+    min-height: 16rem;
+    width: 33rem;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+    background: #00000088;
+    backdrop-filter: blur(9px);
+    border: 2px solid #ffffff85;
+    border-radius: 20px;
+    padding: 1.5rem 1.5rem;
+    
+    opacity: 0;
+    z-index: 1;
+    transition:all 0.5s ease;
+    
+}
+
+.active{
+
+   opacity: 1;
+}
+
+
+.modal_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 12px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ffffff88;
+}
+.modal_header h1{
+    font-size: 2rem;
+}
+
+#cross i{
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.modalAbout h3{
+    font-weight: bold;
+    font-size: 1.3rem;
+    margin: 2rem 0px;
+}
+
+.links{
+    
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a{
+    border: 1px solid blue;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+.links a i{
+    font-size: 27px;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    
+}
+#facebook{
+    color: #1771e6;
+    border: 1px solid #1771e6;
+}
+#facebook:hover {
+    background-color: #1771e6;
+    color: #fff;
+}
+#twitter {
+    color: #1c99e6;
+    border: 1px solid #1c99e6;
+  }
+  #twitter:hover {
+    background-color: #1c99e6;
+    color: #fff;
+  }
+  
+  #instagram {
+    color: #cb2770;
+    border: 1px solid #cb2770;
+  }
+  #instagram:hover {
+    background-color: #cb2770;
+    color: #fff;
+  }
+  
+  #whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+  }
+  #whatsapp:hover {
+    background-color: #2fe664;
+    color: #fff;
+  }
+  
+  #telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+  }
+  #telegram:hover {
+    background-color: #0081c2;
+    color: #fff;
+  }
+
+
+  /* overlay */
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    background-color: #5f5f5f83;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;;
+}
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+}
+
+@media screen and (max-width: 650px) {
+    .modal_card{
+        height: 16rem;
+        width: 23rem;
+        padding: 1rem 1rem;
+        
+    }
+    .modal_header h1{
+        font-size: 1.5rem;
+    }
+    
+    #cross i{
+        font-size: 1.5rem;
+        
+    }
+    .modalAbout h3{
+    
+        font-size: 0.8rem;
+        color: rgba(255, 255, 255, 0.436);
+       
+    }
+    
+    
+}
+
+@media screen and (max-width:450px) {
+    .modal_card{
+        height: 13rem;
+        width: 15rem;
+        padding: 1rem 1rem;
+        
+    }
+    .modal_header h1{
+        font-size: 12px;
+    }
+}
+
+
