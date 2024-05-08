@@ -1,0 +1,4 @@
+*** NOTE **
+1 Setup tailwind in your system
+2 delete all file except folder "node_modules"
+3 go to prompt and write => npm run server
