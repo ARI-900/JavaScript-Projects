@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    line-height: 1.4;
+    font-weight: 400;
+    
+}
+
+body,html {
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+#navSection {
+    background-color: darkblue;
+    color: white;
+
+    box-shadow: 0px 0px 5px 2px rgb(14, 14, 14);
+    
+    position:sticky;
+    top: 0px;
+}
+
+.innerNav {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    padding-right: 2rem; display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    padding-right: 2rem;
+}
+
+ul {
+    display: flex;
+   align-items: center;
+   gap: 1rem;
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+a:after {
+    content: "";
+    background-color: #fff;
+    height: 2px;
+    width: 0%;
+
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+
+    transition: width 0.4s ease, left 0.4s ease;
+}
+a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* hero section */
+.heroSection {
+    max-width: 1200px;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img {
+    height: 100vh;
+    width: 50%;
+
+}
+
+.heroText {
+    margin-left: 1.5rem;
+}
+
+.heroText h1 {
+    font-size: 50px;
+    font-weight: bold;
+}
+/* media query */
+@media screen and (max-width: 800px) {
+    .heroText h1 {
+        font-size: 2.5rem;
+    }
+}
+#heroHead {
+    color: orangered;
+    font-weight: bold;
+}
+.heroText h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+.heroText p {
+    margin-top: 1rem;
+    color: #242323c1;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+#btn {
+    margin-top: 1em;
+    padding: 8px 1rem;
+    text-align: center;
+    border:none;
+    border-radius: 4px;
+    background-color: dodgerblue ;
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.4s ease;
+}
+
+#btn:hover {
+    background-color: rgb(11, 123, 236);
+}
+
+.active {
+    background-color: #15191d;
+    color: white;
+}
