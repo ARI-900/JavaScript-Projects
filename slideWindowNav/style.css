@@ -1,0 +1,73 @@
+#menu{
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: red;  
+    cursor: pointer; 
+}
+html,body{
+    transition: background-color 0.5s;
+}
+
+.slideBar{
+    height: 100%;
+    width: 0px;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: #111;
+    padding-top: 6rem;
+    overflow-x: hidden;
+
+    transition: all 0.6s ease;
+}
+
+.slideBar a{
+    text-decoration: none;
+    color: gray;
+    text-shadow: 1px 2px  8px rgba(194, 185, 185, 0.5);
+    font-size: 2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 8px 15px 1.7rem;
+    display: block;
+    text-align: center;
+    
+    transition: all 0.4s ease;
+}
+
+.slideBar a:hover{
+    color:white;
+}
+
+/* closebar */
+.closeBtn{
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+.closeBtn:hover{
+    scale: 1.4;
+}
+
+
+/* responsive */
+@media screen and (max-width: 1050px) {
+    .slideBar a{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .slideBar a{
+        padding: 8px 8px 15px 1rem;
+    }
+}
+
+
+@media screen and (max-width: 390px) {
+    
+    .slideBar a{
+        font-size: 1rem;
+        padding: 8px 8px 10px 10px;
+        text-align: start;
+    }
+}
