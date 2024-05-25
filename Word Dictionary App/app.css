@@ -1,0 +1,25 @@
+*,
+*::before,
+*::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body,html {
+    width: 100vw;
+    min-height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.6;
+}
+
+.text-format {
+    font-size: 0.7rem;
+    padding: 8px;
+    text-align: justify;
+    line-height: 1.8;
+
+}
+
